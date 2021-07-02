@@ -1,0 +1,345 @@
+
+
+
+:root
+{
+
+    --bg-gradient:linear-gradient(45deg,
+    #845ec2,
+    #d65db1,
+    #ff6f91,
+    #ff9671,
+    #ffc75f
+       );
+
+    --txt-gradient:linear-gradient(45deg,
+       #d65db1,
+       #ff6f9f,
+       #3385ff,
+       #845ec2
+       );
+
+
+      
+}
+
+  
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo 2', cursive;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+    
+
+}
+html
+{
+    scroll-behavior: smooth;
+    
+}
+
+/*--------------styling preloader-------- */
+.preloader
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3434;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+/* class toggled in js */
+.preloaderChanged
+{
+    opacity: 0;
+    visibility: hidden;
+}
+/*---------------- styling navbar-------------------- */
+.div_with_nav
+{
+    width: 100%;
+    height:auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+
+.div_with_hamburger
+{
+    display: none;
+    
+}
+.div_with_ul
+{
+    width: 400px;
+}
+.ul
+{   list-style-type: none;
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+.ul a
+{
+    text-decoration: none;
+    font-size: 25px;
+    color: #dd4eb2;
+   
+}
+
+/* -----------------------------------styling home section---- */
+.home
+{
+    border: 1px solid black; 
+    height: 100vh;
+    width: 100%;
+    background-image: url("../Images/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    animation: bg-trans 20s alternate  infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.home::before
+{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.473);
+}
+#heading_in_home_section
+
+{
+   
+    z-index: 334;
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    background-image: var(--txt-gradient);
+    background-position: left;
+    background-size: 500%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    animation: switcher 3s alternate infinite;
+}
+/* --------------styling about section------------------------------------------- */
+.about
+{
+    
+     
+    background-image: var(--bg-gradient);
+    background-position: left;
+    background-size: 500%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    padding: 20px;
+
+    animation: switcher 20s alternate infinite;
+    
+ 
+
+   
+}
+#div_with_image
+{
+    
+  max-width: 200px;
+  height: 170px;
+  margin-top: 20px;
+    
+}
+#img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#div_with_content
+{   
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.insider
+{
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.281);
+    padding: 20px;
+    
+    border-radius: 20px;
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.479);
+}
+.insider_heading
+{
+    background-image: var(--txt-gradient);
+    background-position: left;
+    background-size: 500%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    animation: switcher 3s alternate infinite;
+
+}
+
+/* --------------------styling the contact section----- */
+.contact
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+   min-height: 70vh;
+    background-color:black;
+    flex-wrap: wrap;
+}
+.insider_div_of_contact
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.div_inside_contact_div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    font-size: 40px;
+
+    background-image: var(--bg-gradient);
+    background-position: left;
+    background-size: 500%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+   
+    animation: switcher 3s alternate infinite;
+    
+}
+.counter
+{
+    
+    background-image: var(--txt-gradient);
+    background-position: left;
+    background-size: 500%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+   
+    animation: switcher 3s alternate infinite;
+}
+
+@media only screen and (max-width:900px)
+{
+
+    /*---------------- styling navbar-------------------- */
+
+    .div_with_nav
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .div_with_ul{
+        display: none;
+
+    }
+    .div_with_hamburger{
+        display: block;
+        font-size: 30px;
+        width: 30px;
+        color: #dd4eb2;
+    }
+    .changed {
+        display: block;
+        
+    }
+    .ul
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        
+    }
+    .ul li
+    {
+        margin:20px ;
+        
+    }
+    .div_with_ul
+    {
+        width: 100%;
+    }
+    #child
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: auto;
+    }
+}
+
+/* making animation for heading in about section */
+/* -------------------------------- */
+@keyframes switcher
+ {
+
+    0%
+    {
+        background-position: left;
+    }
+    100%
+    {
+        background-position:right ;
+    }
+}
+
+/* making animation for image transition in home section */
+/* -------------------------------- */
+@keyframes bg-trans {
+    50%{
+        background-image: url("../Images/2.jpg");
+    }
+    100%
+    {
+        background-image: url("../Images/3.jpg");
+    }
+}
